@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Opticsproject", "Opticsproject\Opticsproject.csproj", "{0E2D72F9-D4B8-457B-ACB8-EC49613A00E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Opticsproject", "Opticsproject\Opticsproject.csproj", "{0E2D72F9-D4B8-457B-ACB8-EC49613A00E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{ABF33962-3BF9-4885-8AC6-436CC220FE7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{569883A5-79FB-4FB6-ACED-509510751A20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{257A70A9-ADC5-4FBD-B8FC-5C1B3FCC7E7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{0E2D72F9-D4B8-457B-ACB8-EC49613A00E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E2D72F9-D4B8-457B-ACB8-EC49613A00E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E2D72F9-D4B8-457B-ACB8-EC49613A00E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABF33962-3BF9-4885-8AC6-436CC220FE7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABF33962-3BF9-4885-8AC6-436CC220FE7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABF33962-3BF9-4885-8AC6-436CC220FE7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABF33962-3BF9-4885-8AC6-436CC220FE7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{569883A5-79FB-4FB6-ACED-509510751A20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{569883A5-79FB-4FB6-ACED-509510751A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{569883A5-79FB-4FB6-ACED-509510751A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{569883A5-79FB-4FB6-ACED-509510751A20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{257A70A9-ADC5-4FBD-B8FC-5C1B3FCC7E7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{257A70A9-ADC5-4FBD-B8FC-5C1B3FCC7E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{257A70A9-ADC5-4FBD-B8FC-5C1B3FCC7E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{257A70A9-ADC5-4FBD-B8FC-5C1B3FCC7E7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
