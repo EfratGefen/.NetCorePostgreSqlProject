@@ -8,6 +8,6 @@ namespace DAL.Interface
 {
     internal interface ICustomer
     {
-
+        void AddNewCustomer();
     }
 }
