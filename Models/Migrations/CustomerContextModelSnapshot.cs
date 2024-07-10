@@ -31,11 +31,12 @@ namespace Models.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
+                        //.IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<double>("GLAddition")
-                        .HasColumnType("double precision");
+                    b.Property<string>("GLAddition")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int>("GLAxis")
                         .HasColumnType("integer");
@@ -43,14 +44,17 @@ namespace Models.Migrations
                     b.Property<double>("GLIndex")
                         .HasColumnType("double precision");
 
-                    b.Property<double>("GLNumber")
-                        .HasColumnType("double precision");
+                    b.Property<string>("GLNumber")
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                    b.Property<int>("GLPrizma")
-                        .HasColumnType("integer");
+                    b.Property<string>("GLPrizma")
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                    b.Property<double>("GLcylinder")
-                        .HasColumnType("double precision");
+                    b.Property<string>("GLcylinder")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<string>("GModel")
                         .IsRequired()
@@ -59,20 +63,24 @@ namespace Models.Migrations
                     b.Property<int>("GPD")
                         .HasColumnType("integer");
 
-                    b.Property<double>("GRAddition")
-                        .HasColumnType("double precision");
+                    b.Property<string>("GRAddition")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int>("GRAxis")
                         .HasColumnType("integer");
 
-                    b.Property<double>("GRNumber")
-                        .HasColumnType("double precision");
+                    b.Property<string>("GRNumber")
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                    b.Property<int>("GRPrizma")
-                        .HasColumnType("integer");
+                    b.Property<string>("GRPrizma")
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                    b.Property<double>("GRcylinder")
-                        .HasColumnType("double precision");
+                    b.Property<string>("GRcylinder")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<double>("GRindex")
                         .HasColumnType("double precision");
@@ -83,22 +91,25 @@ namespace Models.Migrations
                     b.Property<double>("LBC")
                         .HasColumnType("double precision");
 
-                    b.Property<double>("LNumber")
-                        .HasColumnType("double precision");
+                    b.Property<string>("LNumber")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<double>("Lcylinder")
-                        .HasColumnType("double precision");
+                    b.Property<string>("Lcylinder")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<string>("Phone")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<double>("PreGLAddition")
-                        .HasColumnType("double precision");
+                    b.Property<string>("PreGLAddition")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int>("PreGLAxis")
                         .HasColumnType("integer");
@@ -106,32 +117,39 @@ namespace Models.Migrations
                     b.Property<double>("PreGLIndex")
                         .HasColumnType("double precision");
 
-                    b.Property<double>("PreGLNumber")
-                        .HasColumnType("double precision");
+                    b.Property<string>("PreGLNumber")
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                    b.Property<int>("PreGLPrizma")
-                        .HasColumnType("integer");
+                    b.Property<string>("PreGLPrizma")
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                    b.Property<double>("PreGLcylinder")
-                        .HasColumnType("double precision");
+                    b.Property<string>("PreGLcylinder")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int>("PreGPD")
                         .HasColumnType("integer");
 
-                    b.Property<double>("PreGRAddition")
-                        .HasColumnType("double precision");
+                    b.Property<string>("PreGRAddition")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int>("PreGRAxis")
                         .HasColumnType("integer");
 
-                    b.Property<double>("PreGRNumber")
-                        .HasColumnType("double precision");
+                    b.Property<string>("PreGRNumber")
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                    b.Property<int>("PreGRPrizma")
-                        .HasColumnType("integer");
+                    b.Property<string>("PreGRPrizma")
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                    b.Property<double>("PreGRcylinder")
-                        .HasColumnType("double precision");
+                    b.Property<string>("PreGRcylinder")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<double>("PreGRindex")
                         .HasColumnType("double precision");
@@ -145,11 +163,13 @@ namespace Models.Migrations
                     b.Property<double>("RBC")
                         .HasColumnType("double precision");
 
-                    b.Property<double>("RNumber")
-                        .HasColumnType("double precision");
+                    b.Property<string>("RNumber")
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                    b.Property<double>("Rcylinder")
-                        .HasColumnType("double precision");
+                    b.Property<string>("Rcylinder")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
