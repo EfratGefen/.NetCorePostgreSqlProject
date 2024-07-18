@@ -2,6 +2,7 @@ using DAL.Interface;
 using DAL.Data;
 using Microsoft.EntityFrameworkCore;
 using Models.MODELS;
+using BL;
 
 var builder = WebApplication.CreateBuilder(args);
 string myCors = "_myCors";
@@ -38,7 +39,7 @@ if (app.Environment.IsDevelopment())
 }
 app.UseCors(myCors);
 app.UseHttpsRedirection();
-
+app.UseMiddleware<IdValidationMiddleware>();
 app.UseAuthorization();
 
 app.MapControllers();
