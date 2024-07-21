@@ -1,5 +1,6 @@
 ﻿using DAL.Dtos;
 using DAL.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Models.MODELS;
@@ -8,6 +9,7 @@ namespace Opticsproject.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CustomerController : ControllerBase
     {
         private readonly ICustomer _dbCustomer;
@@ -53,5 +55,6 @@ namespace Opticsproject.Controllers
             }
             return BadRequest();
         }
+
     }
 }
