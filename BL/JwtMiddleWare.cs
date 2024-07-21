@@ -35,7 +35,7 @@ namespace BL
             try
             {
                 var tokenHandler = new JwtSecurityTokenHandler();
-                var key = Encoding.ASCII.GetBytes("yourSecretKey");
+                var key = Encoding.ASCII.GetBytes("your_longer_secret_key_here");
                 tokenHandler.ValidateToken(token, new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
