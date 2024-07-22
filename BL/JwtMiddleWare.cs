@@ -1,12 +1,9 @@
-﻿
-
-
-    using Microsoft.AspNetCore.Http;
-    using Microsoft.IdentityModel.Tokens;
-    using System.IdentityModel.Tokens.Jwt;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 namespace BL
 {
     public class JwtMiddleware

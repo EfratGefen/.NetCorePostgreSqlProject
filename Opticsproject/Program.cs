@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi.Models;
+using Serilog;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -82,6 +83,10 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
     };
 });
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.File(@"C:\Sostware\.Net core\Opticsproject\",
+    rollingInterval: RollingInterval.Day)
+    .CreateLogger();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -92,6 +97,7 @@ if (app.Environment.IsDevelopment())
 }
 app.UseCors(myCors);
 app.UseHttpsRedirection();
+app.UseMiddleware<LogMiddleWare>();
 app.UseMiddleware<JwtMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
