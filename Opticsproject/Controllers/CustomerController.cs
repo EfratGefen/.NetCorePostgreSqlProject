@@ -19,6 +19,7 @@ namespace Opticsproject.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy = "RequireAdminRole")]
         public async Task<IActionResult> Post([FromBody] CustomerDto value)
         {
           bool create= await _dbCustomer.CreateCustomer(value);
@@ -29,6 +30,7 @@ namespace Opticsproject.Controllers
             return BadRequest();
         }
         [HttpDelete("{id}")]
+        [Authorize(Policy = "RequireAdminRole")]
         public async Task<IActionResult> Delete(long id)
         {
             bool delete = await _dbCustomer.DeleteCustomer(id);
@@ -39,6 +41,7 @@ namespace Opticsproject.Controllers
             return BadRequest();
         }
         [HttpGet("{id}")]
+        [Authorize(Policy = "AdminOrCustomer")]
         public async Task<Customer> Get(long id)
         {
             Customer c = await _dbCustomer.GetCustomer(id);
@@ -46,6 +49,7 @@ namespace Opticsproject.Controllers
             return c;
         }
         [HttpPut("{id}")]
+        [Authorize(Policy = "RequireAdminRole")]
         public async Task<IActionResult> Put(int id, [FromBody] CustomerDto c)
         {
             bool put = await _dbCustomer.UpdateCustomer(id,c);

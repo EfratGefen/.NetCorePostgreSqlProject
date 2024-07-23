@@ -6,6 +6,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using DAL.Dtos;
+using System.Data;
 
 namespace Opticsproject.Controllers
 {
@@ -30,14 +31,14 @@ namespace Opticsproject.Controllers
             // כאן את יכולה להוסיף את הלוגיקה שלך לבדוק אם המשתמש מאומת
             if (login.Username == "test" && login.Password == "password") // דוגמה לבדיקת משתמש
             {
-                var token = GenerateToken("userId"); // החליפי ב-userId נכון
+                var token = GenerateToken("userId", "Customer"); // החליפי ב-userId נכון
                 return Ok(new { Token = token });
             }
 
             return Unauthorized("Invalid credentials");
         }
 
-        private string GenerateToken(string userId)
+        private string GenerateToken(string userId, string role)
         {
             if (string.IsNullOrEmpty(_secretKey) || _secretKey.Length < 16)
             {
@@ -50,7 +51,8 @@ namespace Opticsproject.Controllers
             var claims = new[]
             {
                 new Claim(JwtRegisteredClaimNames.Sub, userId),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(ClaimTypes.Role, role)
             };
 
             var token = new JwtSecurityToken(
