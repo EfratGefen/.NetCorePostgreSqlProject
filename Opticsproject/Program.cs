@@ -109,7 +109,6 @@ app.UseMiddleware<JwtMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
 
-//app.UseMiddleware<IdValidationMiddleware>();
 app.MapControllers();
 
 app.Run();
