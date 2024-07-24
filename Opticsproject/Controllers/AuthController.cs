@@ -31,7 +31,7 @@ namespace Opticsproject.Controllers
             // כאן את יכולה להוסיף את הלוגיקה שלך לבדוק אם המשתמש מאומת
             if (login.Username == "test" && login.Password == "password") // דוגמה לבדיקת משתמש
             {
-                var token = GenerateToken("userId", "Admin"); // החליפי ב-userId נכון
+                var token = GenerateToken("userId", "Admin"); 
                 return Ok(new { Token = token });
             }
 
